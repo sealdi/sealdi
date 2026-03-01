@@ -1,16 +1,26 @@
-## Hi there 👋
+# Consulta de Oftalmología
 
-<!--
-**sealdi/sealdi** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Aplicación web simple para abrir la consulta de un paciente y **enviar automáticamente a impresión**:
 
-Here are some ideas to get you started:
+- Prescripción de gafas.
+- Prescripción de lentes de contacto.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## Cómo usar
+
+1. Inicia un servidor estático desde este directorio:
+   ```bash
+   python3 -m http.server 8000
+   ```
+2. Abre `http://localhost:8000`.
+3. Completa los datos del paciente y de ambas prescripciones.
+4. Haz clic en **"Abrir consulta e imprimir prescripciones"**.
+5. Se abrirá una ventana con formato de impresión que dispara `window.print()` automáticamente.
+
+> Si el navegador bloquea ventanas emergentes, habilítalas para permitir la impresión automática.
+
+
+## Nota si ves pantalla en blanco
+
+- Abre la app usando servidor (`python3 -m http.server 8000`) y no con doble clic del archivo.
+- Si el navegador bloquea pop-ups, la app ahora usa un modo alternativo de impresión en `iframe`.
+- Prueba en `http://localhost:8000` o `http://127.0.0.1:8000`.
